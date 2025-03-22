@@ -1,64 +1,107 @@
-<!-- index.html -->
+<!-- Carregue o arquivo estático -->
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Adicione um favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-<div class="parent">
-    <header class="headr">
-        <!-- Cabeçalho com título e logo -->
-        <h1>Sobre Nós</h1>
-    </header>
+    <div class="container">
+        <header class="header">
+            <!-- Cabeçalho com título e logo -->
+            <h1>Projeto Integrador <br>pi-25.5.3</h1>
+        </header>
 
-    <nav class="nav">
-        <!-- Navegação com links para outras páginas -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <!-- Navegação com links para outras páginas -->
+            <div>
+                <a href="#">Home</a>    
+                <a href="#">A historia até aqui</a> 
+            </div>
+        </nav>
 
-    <aside class="aside">
-        <!-- Barra lateral com informações adicionais -->
-        <h2>Equipe</h2>
-        <ul>
-            <li>
-                <img src="perfil sem foto.jpg" alt="Aluno 1">
-                <p>Aluno 1 - "Frase motivacional do aluno 1"</p>
-            </li>
-            <li>
-                <img src="chrome_SeM4qxnuXl.png" alt="Aluno 2">
-                <p>Aluno 2 - "Frase motivacional do aluno 2"</p>
-            </li>
-            <!-- Adicionar mais alunos aqui -->
-        </ul>
-    </aside>
+        <aside class="aside">
+            <!-- Barra lateral com informações adicionais -->
+            <h2>Equipe</h2>
+            <div class="card-conteiner">
+                <div class="card-1">
+                    <p>Nome Aluno</p>
+                    <img id="img-perfil" src="chrome_SeM4qxnuXl.png" alt="Foto do Aluno 1">
+                    <p>Nome - "Frase motivacional do aluno 1"</p>
+                </div>
+                <div class="card-2">
+                    <p>Nome Aluno</p>
+                    <img id="img-perfil" src="perfil sem foto.jpg" alt="Foto do Aluno 2">
+                    <p>"Frase motivacional do aluno 2"</p>
+                    
+                </div>
+                <div class="card-3">
+                    <p>Nome Aluno</p>
+                    <img id="img-perfil" src="chrome_SeM4qxnuXl.png" alt="Foto do Aluno 1">
+                    <p>Nome - "Frase motivacional do aluno 3"</p>
+                </div>
+                <div class="card-4">
+                    <p>Nome Aluno</p>
+                    <img id="img-perfil" src="perfil sem foto.jpg" alt="Foto do Aluno 2">
+                    <p>Nome - "Frase motivacional do aluno 4"</p>
+                </div>
+                <!-- Adicionar mais alunos aqui -->
+            </div>
+        </aside>
 
-    <main class="main">
-        <!-- Conteúdo principal da página -->
-        <h2>Construção do Projeto</h2>
-        <p>Nossa equipe de 12 alunos trabalhou arduamente para criar este programa de e-commerce.</p>
-        <img src="" alt="Equipe trabalhando">
-        <h2>Tecnologias Utilizadas</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>MySQL</li>
-        </ul>
-    </main>
+        <main class="main">
+            <!-- Conteúdo principal da página -->
+            <h2>Construção do Projeto</h2>
+            <p>O projeto Nossa equipe de 12 alunos trabalhou arduamente para criar este programa de e-commerce.</p>
+            <img id="img-reuniao" src="equipe.jpg" alt="Foto da equipe trabalhando">
+            <h2>Tecnologias Utilizadas</h2>
+            <ul>
+                <li>HTML
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illo necessitatibus asperiores, dolorem tenetur quam molestiae assumenda quis minima a quisquam aperiam at sint est quibusdam veritatis magni minus consectetur.</p>
+                </li>
 
-    <footer class="footer">
-        <!-- Rodapé com informações de contato e direitos autorais -->
-        <p>&copy; 2025 Equipe de Desenvolvimento</p>
-    </footer>
-</div>
-    
+                <li>CSS
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aut saepe alias architecto, inventore, labore provident officia molestias minima voluptatum recusandae at, esse quis dolorem? Qui quidem atque quas sit.</p>
+                </li>
+
+                <li>Python
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem praesentium, illo, amet deserunt enim consequatur, minima quidem labore vero ipsa incidunt quos natus deleniti cum dolorem voluptates repudiandae nobis consectetur.</p>
+                </li>
+
+                <li>Django
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero velit odio minima eum distinctio fugiat, at quaerat ex dolores id ipsa ad, sapiente quo unde architecto! Ex vitae eligendi enim.</p>
+                </li>
+                
+                <li>MySQL
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quaerat harum esse recusandae, placeat possimus earum natus ea! Totam quas modi, maiores corporis quibusdam autem. Sint iure saepe deserunt natus.</p>
+                </li>
+            </ul>
+            <!-- Adicione uma seção de comentários ou feedback -->
+            <h2>Comentários e Feedback</h2>
+            <form>
+                <textarea name="comentario" placeholder="Deixe seu comentário aqui..."></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <!-- Rodapé com informações de contato e direitos autorais -->
+            <div class="social">
+                <img src="" alt="Instagra">
+                <img src="" alt="GitHub">
+                <img src="" alt="Site">
+            </div>
+            <p>&copy; 2025 Equipe de Desenvolvimento</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,135 +1,85 @@
-/* estilo.css */
+/* Defina as variáveis CSS */
+:root {
+  --cor-principal: #333;
+  --cor-secundaria: #666;
+  --cor-terciaria: #999;
+  --fonte-principal: Arial, sans-serif;
+}
 
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Defina o estilo do corpo da página */
+body {
+  background-color: #33333371; /* Define a cor de fundo do corpo */
+  font-family: var(--fonte-principal); /* Define a fonte do corpo */
+}
+
+/* Defina o estilo do container */
+.container {
+  max-width: 1200px; /* Define o máximo de largura do container */
+  margin: 0 auto; /* Define a margem do container */
+  display: grid; /* Define o display do container como grid */
+  grid-template-columns: 400px 1fr; /* Define o layout do grid */
+  gap: 3px; /* Define a distância entre os itens do grid */
+}
+
+/* Defina o estilo do header */
+.header {
+  grid-column: 1 / -1; /* Define a largura do header no grid */
+  background-color: var(--cor-secundaria); /* Define a cor de fundo do header */
+  height: 200px; /* Define a altura do header */
+  display: flex; /* Define o display do header como flex */
+  justify-content: center; /* Define o alinhamento do texto do header */
+  align-items: center; /* Define o alinhamento do texto do header */
+}
+
+/* Defina o estilo do nav */
+.nav {
+  grid-column: 1 / -1; /* Define a largura do nav no grid */
+  background-color: rgb(58, 57, 48); /* Define a cor de fundo do nav */
+  height: 40px; /* Define a altura do nav */
+  display: flex; /* Define o display do nav como flex */
+  justify-content: center; /* Define o alinhamento do texto do nav */
+  align-items: center; /* Define o alinhamento do texto do nav */
+}
+
+.nav a, .footer a{
+  color: white;
+}
+
+.nav a:hover{
+  color: rgb(43, 2, 51);
+}
+
+/* Defina o estilo da barra lateral */
+.aside {
+  grid-column: 1; /* Define a posição da barra lateral no grid */
+  background-color: rgb(101, 100, 86); /* Define a cor de fundo da barra lateral */
+  width: 300px; /* Define a largura da barra lateral */
+  padding: 35px; /* Define o preenchimento da barra lateral */
   
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .parent {
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 8px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-  }
-  
-  .header {
-    background-color: grey;
-    grid-column: span 7 / span 7;
-    grid-row: span 2 / span 2;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .nav {
-    background-color: blue;
-    grid-column: span 7 / span 7;
-    grid-row-start: 3;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .nav a:hover {
-    color: #ccc;
-  }
-  
-  .aside {
-    background-color: yellow;
-    grid-column: span 2 / span 2;
-    grid-row: span 6 / span 6;
-    grid-row-start: 4;
-    padding: 20px;
-  }
-  
-  .aside h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .aside ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .aside li {
-    margin-bottom: 20px;
-  }
-  
-  .aside img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .main {
-    background-color: green;
-    grid-column: span 5 / span 5;
-    grid-row: span 6 / span 6;
-    grid-column-start: 3;
-    grid-row-start: 4;
-    padding: 20px;
-  }
-  
-  .main h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .main p {
-    margin-bottom: 20px;
-  }
-  
-  .main img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .footer {
-    background-color: orange;
-    grid-column: span 7 / span 7;
-    grid-row-start: 10;
-    padding: 20px;
-    text-align: center;
-    clear: both;
-  }
-  
-  .footer p {
-    color: #fff;
-    margin-bottom: 10px;
-  }
+}
+
+#img-perfil{
+  width: 200px;
+  border-radius: 50%;
+}
+
+#img-reuniao{
+  width: 800px;
+  padding: 5px;
+}
+
+/* Defina o estilo do conteúdo principal */
+.main {
+  background-color: rgb(61, 61, 55); /* Define a cor de fundo do conteúdo principal */
+  padding: 5px; /* Define o preenchimento do conteúdo principal */
+}
+
+/* Defina o estilo do rodapé */
+.footer {
+  grid-column: 1 / -1; /* Define a largura do rodapé no grid */
+  background-color: rgb(58, 57, 48); /* Define a cor de fundo do rodapé */
+  height: 40px; /* Define a altura do rodapé */
+  display: flex; /* Define o display do rodapé como flex */
+  justify-content: center; /* Define o alinhamento do texto do rodapé */
+  align-items: center; /* Define o alinhamento do texto do rodapé */
+}
