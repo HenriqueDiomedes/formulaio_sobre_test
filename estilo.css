@@ -56,13 +56,54 @@ body {
   background-color: rgb(101, 100, 86); /* Define a cor de fundo da barra lateral */
   width: 300px; /* Define a largura da barra lateral */
   padding: 35px; /* Define o preenchimento da barra lateral */
-  
 }
 
-#img-perfil{
+.card-conteiner{
+  background-color: yellowgreen;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-slider{
+  display: inline-block;
+  transition: transform o.5s ease-in-out;
+}
+
+.card-slider #img-perfil{
   width: 200px;
   border-radius: 50%;
+  display: flow-root;
 }
+
+.card-slider #img-perfil:first-child{
+  display: inline-block;
+}
+
+.card-conteiner:hover .card-slider{
+  animation: anima 5s linear infinite;
+
+}
+
+@keyframes anima{
+  
+    /* Início da animação */
+    0% {
+      /* Não move a imagem */
+      transform: translateX(0);
+  }
+
+  /* Fim da animação */
+  100% {
+      /* Move a imagem para a esquerda */
+      transform: translateX(-50%);
+  }
+}
+
+.card-conteiner:hover .card-slider{
+  display: inline-flex;
+}
+
 
 #img-reuniao{
   width: 800px;
