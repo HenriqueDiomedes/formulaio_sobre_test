@@ -1,54 +1,89 @@
 /* Defina as variáveis CSS */
+@font-face {
+  font-family: 'fonte1';
+  src: url(font/FathersDisplayRegular.ttf);
+}
 :root {
-  --cor-principal: #333;
+  --cor-principal: rgba(0, 0, 0, 0.603);
   --cor-secundaria: #666;
   --cor-terciaria: #999;
+
+  --fonte-titulo: fonte1;
   --fonte-principal: Arial, sans-serif;
 }
 
+
 /* Defina o estilo do corpo da página */
 body {
-  background: url('img/fundo.jpg') center center no-repeat cover;
   /* Define a cor de fundo do corpo */
+  background-image: url('img/fundo-4.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: var(--fonte-principal);
   /* Define a fonte do corpo */
 }
 
+a.externo::after {
+  /*usado para todo link externo*/
+  content: '\00a0\1f517';
+}
+
 /* Defina o estilo do container */
 .container {
-  max-width: 1200px;
+  /* box-shadow: 2px 2px 5px black; */
   /* Define o máximo de largura do container */
-  margin: 0 auto;
+  max-width: auto;
   /* Define a margem do container */
-  display: grid;
+  margin: 0 auto;
   /* Define o display do container como grid */
-  grid-template-columns: 400px 1fr;
+  display: grid;
   /* Define o layout do grid */
-  gap: 3px;
+  grid-template-columns: 400px 1fr;
   /* Define a distância entre os itens do grid */
+  gap: 3px;
 }
 
 /* Defina o estilo do header */
 .header {
+  background-color: var(--cor-principal);     /* cor promaria*/
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
   grid-column: 1 / -1;
-  /* Define a largura do header no grid */
-  background-color: var(--cor-secundaria);
-  /* Define a cor de fundo do header */
   height: 200px;
-  /* Define a altura do header */
   display: flex;
-  /* Define o display do header como flex */
   justify-content: center;
-  /* Define o alinhamento do texto do header */
   align-items: center;
-  /* Define o alinhamento do texto do header */
+}
+
+.header h2{
+  font-family: 'fonte1', sans-serif;
+  font-size: 4em;
+  text-align: start;
+  color: black;
+  text-shadow: 2px 2px 4px #FF0000,
+    -2px -2px 4px #0000FF;
+}
+
+.header h1 {
+    font-family: 'fonte1', sans-serif;
+    font-size: 8em;
+    text-align: center;
+    color: black;
+    margin: 3px;
+    text-shadow: 2px 2px 4px #FF0000,
+      -2px -2px 4px #0000FF;
 }
 
 /* Defina o estilo do nav */
 .nav {
+  background-color: var(--cor-principal);   /*cor secundaria*/
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
   grid-column: 1 / -1;
   /* Define a largura do nav no grid */
-  background-color: rgb(58, 57, 48);
   /* Define a cor de fundo do nav */
   height: 40px;
   /* Define a altura do nav */
@@ -70,89 +105,132 @@ body {
   color: rgb(43, 2, 51);
 }
 
-/* Defina o estilo da barra lateral */
-.aside {
+/* Defina o estilo da barra lateral (equipes)*/
+.container-cards {
+  background-color: var(--cor-principal);
   grid-column: 1;
-  background-color: rgb(206, 193, 14);
+  border: 0.5px solid black;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
+  padding: 5px 0px 5px 0px;
   justify-content: center;
-  width: 300px;
-  padding: 35px;
 }
 
-.card-conteiner {
-  background-color: black;
+.card {
   width: 200px;
-  border: 2px solid black;
-  background-color: aliceblue;
+  border: 2px solid white;
+  background-color: rgba(240, 248, 255, 0.466);
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
 }
 
-.container-slide{
+.container-slide {
   width: 200px;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.paginas-slide{
+.paginas-slide {
   display: inline-block;
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
-.paginas-slide #img-perfil{
+.paginas-slide img {
+  border-radius: 50%;
   width: 200px;
+  display: none;
 }
 
-.paginas-slide #img-perfil:first-child{
+.paginas-slide img:first-child {
   display: inline-block;
 }
 
-.container-slide:hover .paginas-slide{
-  animation: anima 5s linear infinite;
+.container-slide:hover .paginas-slide {
+  animation: anima 10s linear infinite;
 }
-
 
 @keyframes anima {
 
-  /* Início da animação */
   0% {
-    /* Não move a imagem */
     transform: translateX(0);
   }
 
-  /* Fim da animação */
   100% {
-    /* Move a imagem para a esquerda */
     transform: translateX(-50%);
   }
 }
 
-.container-slide:hover .paginas-slide {
+.container-slide:hover .paginas-slide img {
   display: inline-flex;
-}
-
-
-#img-reuniao {
-  width: 800px;
-  padding: 5px;
 }
 
 /* Defina o estilo do conteúdo principal */
 .main {
-  background-color: rgb(61, 61, 55);
+  background-color: var(--cor-principal);     /*cor princial*/
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
   /* Define a cor de fundo do conteúdo principal */
-  padding: 5px;
+  padding: 15px;
   /* Define o preenchimento do conteúdo principal */
+}
+
+.apresentacao {
+  background-color: var(--cor-principal);
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.apresentacao #img-reuniao {
+  width: 800px;
+  padding-left: 50px;
+}
+
+.apresentacao a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.apresentacao a:hover {
+  color: yellowgreen;
+  text-decoration: underline;
+
+}
+
+.art-main {
+  background-color: var(--cor-principal);
+  box-shadow: 2px 0px 5px black;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+}
+
+.feedback {
+  background-color: var(--cor-principal);
+  box-shadow: 0px 2px 5px black;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+  margin-top: 0px;
 }
 
 /* Defina o estilo do rodapé */
 .footer {
+  margin-top: 5px;
+  background-color: var(--cor-principal);
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
   grid-column: 1 / -1;
   /* Define a largura do rodapé no grid */
-  background-color: rgb(58, 57, 48);
   /* Define a cor de fundo do rodapé */
   height: 40px;
   /* Define a altura do rodapé */
@@ -162,4 +240,21 @@ body {
   /* Define o alinhamento do texto do rodapé */
   align-items: center;
   /* Define o alinhamento do texto do rodapé */
+}
+
+.footer p {
+  color: white;
+}
+
+.social img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.social img:hover {
+  transition: rotation 50%;
+}
+
+.nav h2:hover {
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.856);
 }
