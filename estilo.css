@@ -8,120 +8,158 @@
 
 /* Defina o estilo do corpo da página */
 body {
-  background: url('img/fundo.jpg') center center no-repeat cover; /* Define a cor de fundo do corpo */
-  font-family: var(--fonte-principal); /* Define a fonte do corpo */
+  background: url('img/fundo.jpg') center center no-repeat cover;
+  /* Define a cor de fundo do corpo */
+  font-family: var(--fonte-principal);
+  /* Define a fonte do corpo */
 }
 
 /* Defina o estilo do container */
 .container {
-  max-width: 1200px; /* Define o máximo de largura do container */
-  margin: 0 auto; /* Define a margem do container */
-  display: grid; /* Define o display do container como grid */
-  grid-template-columns: 400px 1fr; /* Define o layout do grid */
-  gap: 3px; /* Define a distância entre os itens do grid */
+  max-width: 1200px;
+  /* Define o máximo de largura do container */
+  margin: 0 auto;
+  /* Define a margem do container */
+  display: grid;
+  /* Define o display do container como grid */
+  grid-template-columns: 400px 1fr;
+  /* Define o layout do grid */
+  gap: 3px;
+  /* Define a distância entre os itens do grid */
 }
 
 /* Defina o estilo do header */
 .header {
-  grid-column: 1 / -1; /* Define a largura do header no grid */
-  background-color: var(--cor-secundaria); /* Define a cor de fundo do header */
-  height: 200px; /* Define a altura do header */
-  display: flex; /* Define o display do header como flex */
-  justify-content: center; /* Define o alinhamento do texto do header */
-  align-items: center; /* Define o alinhamento do texto do header */
+  grid-column: 1 / -1;
+  /* Define a largura do header no grid */
+  background-color: var(--cor-secundaria);
+  /* Define a cor de fundo do header */
+  height: 200px;
+  /* Define a altura do header */
+  display: flex;
+  /* Define o display do header como flex */
+  justify-content: center;
+  /* Define o alinhamento do texto do header */
+  align-items: center;
+  /* Define o alinhamento do texto do header */
 }
 
 /* Defina o estilo do nav */
 .nav {
-  grid-column: 1 / -1; /* Define a largura do nav no grid */
-  background-color: rgb(58, 57, 48); /* Define a cor de fundo do nav */
-  height: 40px; /* Define a altura do nav */
-  display: flex; /* Define o display do nav como flex */
-  justify-content: center; /* Define o alinhamento do texto do nav */
-  align-items: center; /* Define o alinhamento do texto do nav */
+  grid-column: 1 / -1;
+  /* Define a largura do nav no grid */
+  background-color: rgb(58, 57, 48);
+  /* Define a cor de fundo do nav */
+  height: 40px;
+  /* Define a altura do nav */
+  display: flex;
+  /* Define o display do nav como flex */
+  justify-content: center;
+  /* Define o alinhamento do texto do nav */
+  align-items: center;
+  /* Define o alinhamento do texto do nav */
 }
 
-.nav a, .footer a{
+.nav a,
+.footer a {
   color: white;
   margin-right: 20px;
 }
 
-.nav a:hover{
+.nav a:hover {
   color: rgb(43, 2, 51);
 }
 
 /* Defina o estilo da barra lateral */
 .aside {
-  grid-column: 1; /* Define a posição da barra lateral no grid */
-  background-color: rgb(101, 100, 86); /* Define a cor de fundo da barra lateral */
-  width: 300px; /* Define a largura da barra lateral */
-  padding: 35px; /* Define o preenchimento da barra lateral */
+  grid-column: 1;
+  background-color: rgb(206, 193, 14);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  padding: 35px;
 }
 
-.card-conteiner{
-  background-color: yellowgreen;
-  width: 300px;
+.card-conteiner {
+  background-color: black;
+  width: 200px;
+  border: 2px solid black;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.container-slide{
+  width: 200px;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.card-slider{
+.paginas-slide{
   display: inline-block;
-  transition: transform o.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
-.card-slider #img-perfil{
+.paginas-slide #img-perfil{
   width: 200px;
-  border-radius: 50%;
-  display: flow-root;
 }
 
-.card-slider #img-perfil:first-child{
+.paginas-slide #img-perfil:first-child{
   display: inline-block;
 }
 
-.card-conteiner:hover .card-slider{
+.container-slide:hover .paginas-slide{
   animation: anima 5s linear infinite;
-
 }
 
-@keyframes anima{
-  
-    /* Início da animação */
-    0% {
-      /* Não move a imagem */
-      transform: translateX(0);
+
+@keyframes anima {
+
+  /* Início da animação */
+  0% {
+    /* Não move a imagem */
+    transform: translateX(0);
   }
 
   /* Fim da animação */
   100% {
-      /* Move a imagem para a esquerda */
-      transform: translateX(-50%);
+    /* Move a imagem para a esquerda */
+    transform: translateX(-50%);
   }
 }
 
-.card-conteiner:hover .card-slider{
+.container-slide:hover .paginas-slide {
   display: inline-flex;
 }
 
 
-#img-reuniao{
+#img-reuniao {
   width: 800px;
   padding: 5px;
 }
 
 /* Defina o estilo do conteúdo principal */
 .main {
-  background-color: rgb(61, 61, 55); /* Define a cor de fundo do conteúdo principal */
-  padding: 5px; /* Define o preenchimento do conteúdo principal */
+  background-color: rgb(61, 61, 55);
+  /* Define a cor de fundo do conteúdo principal */
+  padding: 5px;
+  /* Define o preenchimento do conteúdo principal */
 }
 
 /* Defina o estilo do rodapé */
 .footer {
-  grid-column: 1 / -1; /* Define a largura do rodapé no grid */
-  background-color: rgb(58, 57, 48); /* Define a cor de fundo do rodapé */
-  height: 40px; /* Define a altura do rodapé */
-  display: flex; /* Define o display do rodapé como flex */
-  justify-content: center; /* Define o alinhamento do texto do rodapé */
-  align-items: center; /* Define o alinhamento do texto do rodapé */
+  grid-column: 1 / -1;
+  /* Define a largura do rodapé no grid */
+  background-color: rgb(58, 57, 48);
+  /* Define a cor de fundo do rodapé */
+  height: 40px;
+  /* Define a altura do rodapé */
+  display: flex;
+  /* Define o display do rodapé como flex */
+  justify-content: center;
+  /* Define o alinhamento do texto do rodapé */
+  align-items: center;
+  /* Define o alinhamento do texto do rodapé */
 }
