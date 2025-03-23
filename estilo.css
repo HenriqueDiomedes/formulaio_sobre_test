@@ -8,7 +8,7 @@
 
 /* Defina o estilo do corpo da página */
 body {
-  background-color: #33333371; /* Define a cor de fundo do corpo */
+  background: url('img/fundo.jpg') center center no-repeat cover; /* Define a cor de fundo do corpo */
   font-family: var(--fonte-principal); /* Define a fonte do corpo */
 }
 
