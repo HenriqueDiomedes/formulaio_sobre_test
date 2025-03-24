@@ -1,11 +1,15 @@
-/* Defina as variáveis CSS */
+@charset "UTF-8";
+
+/* importa fonte */
 @font-face {
   font-family: 'fonte1';
   src: url(font/FathersDisplayRegular.ttf);
 }
+
+/* Defina as variáveis CSS */
 :root {
   --cor-principal: rgba(0, 0, 0, 0.603);
-  --cor-secundaria: #666;
+  --cor-secundaria: rgba(240, 248, 255, 0.11);
   --cor-terciaria: #999;
 
   --fonte-titulo: fonte1;
@@ -15,13 +19,11 @@
 
 /* Defina o estilo do corpo da página */
 body {
-  /* Define a cor de fundo do corpo */
   background-image: url('img/fundo-4.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--fonte-principal);
-  /* Define a fonte do corpo */
 }
 
 a.externo::after {
@@ -31,16 +33,10 @@ a.externo::after {
 
 /* Defina o estilo do container */
 .container {
-  /* box-shadow: 2px 2px 5px black; */
-  /* Define o máximo de largura do container */
   max-width: auto;
-  /* Define a margem do container */
   margin: 0 auto;
-  /* Define o display do container como grid */
   display: grid;
-  /* Define o layout do grid */
   grid-template-columns: 400px 1fr;
-  /* Define a distância entre os itens do grid */
   gap: 3px;
 }
 
@@ -60,9 +56,10 @@ a.externo::after {
 .header h2{
   font-family: 'fonte1', sans-serif;
   font-size: 4em;
-  text-align: start;
+  text-align: left;
+  margin-left: 0px;
   color: black;
-  text-shadow: 2px 2px 4px #FF0000,
+  text-shadow: 2px 2px 4px #ffffff,
     -2px -2px 4px #0000FF;
 }
 
@@ -72,37 +69,34 @@ a.externo::after {
     text-align: center;
     color: black;
     margin: 3px;
-    text-shadow: 2px 2px 4px #FF0000,
+    text-shadow: 2px 2px 4px #ffffff,
       -2px -2px 4px #0000FF;
 }
 
 /* Defina o estilo do nav */
 .nav {
-  background-color: var(--cor-principal);   /*cor secundaria*/
+  background-color: var(--cor-principal);   /*cor primaria*/
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 2px 2px 5px black;
   grid-column: 1 / -1;
-  /* Define a largura do nav no grid */
-  /* Define a cor de fundo do nav */
   height: 40px;
-  /* Define a altura do nav */
   display: flex;
-  /* Define o display do nav como flex */
   justify-content: center;
-  /* Define o alinhamento do texto do nav */
   align-items: center;
-  /* Define o alinhamento do texto do nav */
 }
 
 .nav a,
 .footer a {
   color: white;
   margin-right: 20px;
+  text-decoration: none;
+
 }
 
 .nav a:hover {
-  color: rgb(43, 2, 51);
+  color: yellowgreen;  
+  text-decoration: underline;
 }
 
 /* Defina o estilo da barra lateral (equipes)*/
@@ -118,10 +112,15 @@ a.externo::after {
   justify-content: center;
 }
 
+.container-cards h2{
+  text-shadow: 2px 2px 4px #ffffff,
+      -2px -2px 4px #ffffff;
+}
+
 .card {
   width: 200px;
   border: 2px solid white;
-  background-color: rgba(240, 248, 255, 0.466);
+  background-color: var(--cor-secundaria);
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -256,5 +255,5 @@ a.externo::after {
 }
 
 .nav h2:hover {
-  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.856);
+  text-shadow: 1px 3px 5px rgba(152, 18, 179, 0.856);
 }
