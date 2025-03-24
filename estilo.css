@@ -135,21 +135,20 @@ a.externo::after {
 
 .paginas-slide {
   display: inline-block;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 
 .paginas-slide img {
   border-radius: 50%;
   width: 200px;
-  display: none;
 }
 
-.paginas-slide img:first-child {
+.paginas-slide img {
   display: inline-block;
 }
 
-.container-slide:hover .paginas-slide {
-  animation: anima 10s linear infinite;
+.container-slide .paginas-slide {
+  animation: anima 9s linear infinite;
 }
 
 @keyframes anima {
