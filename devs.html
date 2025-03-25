@@ -42,7 +42,38 @@
         margin-bottom: 20px;
         font-size: 7em;
         text-shadow: 2px 2px 4px #ffffff,
-        -2px -2px 4px #f5f5f8;    }
+            -2px -2px 4px #f5f5f8;
+        border-right: 4px solid #fbfcfc;
+        width: 16ch;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: blink 5s infinite,typing 5s infinite steps(16);
+    }
+
+    .titulo span {
+        color: black;
+    }
+
+    @keyframes blink {
+        50% {
+            border-right-color: transparent;
+        }
+    }
+
+    @keyframes typing{
+        0%{
+            width: 0;
+        }
+        40%{
+            width: 16ch;
+        }
+        60%{
+            width: 16ch;
+        }
+        100%{
+            width: 0;
+        }
+    }
 
     .main {
         background-color: #03030370;
@@ -116,7 +147,7 @@
 
 <body>
     <header class="container">
-        <h1 class="titulo">Equide de Dev's</h1>
+        <h1 class="titulo"><span>Equide de Dev's</span></h1>
     </header>
     <main>
         <section class="main">
