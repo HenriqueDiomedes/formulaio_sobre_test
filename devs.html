@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @font-face {
+        font-family: 'fonte1';
+        src: url(font/FathersDisplayRegular.ttf);
+    }
+
+    :root {
+        --fonte-titulo: fonte1;
+        --fonte-principal: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f0f0f0;
+        background-image: url(img/fundo-4.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background-color: #ffffff28;
+        max-width: 1200px;
+        margin: 40px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .titulo {
+        font-family: var(--fonte-titulo);
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 7em;
+        text-shadow: 2px 2px 4px #ffffff,
+        -2px -2px 4px #f5f5f8;    }
+
+    .main {
+        background-color: #03030370;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.452);
+    }
+
+    .content {
+        background-color: rgba(252, 250, 248, 0.466);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .imagem {
+        width: 250px;
+        height: 250px;
+        margin-right: 20px;
+        border-radius: 50%;
+        padding-left: 10px;
+
+    }
+
+    .descricao {
+        flex: 1;
+        margin-top: 10px;
+    }
+
+    .descricao p {
+        text-align: justify;
+        margin-bottom: 20px;
+        padding-right: 15px;
+    }
+
+    .social button {
+        animation: piscar 1s 2s infinite;
+    }
+
+    @keyframes piscar {
+        0% {
+            opacity: 1;
+        }
+
+        25% {
+            opacity: 0.5;
+            text-shadow: 2px 2px 5px rgb(255, 255, 255);
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            text-shadow: 2px 2px 5px rgb(236, 222, 25), -2px -2px 5px rgb(255, 2, 2);
+        }
+    }
+
+    .social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .social a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <header class="container">
+        <h1 class="titulo">Equide de Dev's</h1>
+    </header>
+    <main>
+        <section class="main">
+            <article class="content">
+                <img src="img/perfil-masculino.jpg" alt="Imagem de Exemplo" class="imagem">
+                <article class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum
+                        magna
+                        sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus
+                        mus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores id placeat tempora
+                        incidunt
+                        eius odit, voluptatum molestiae iste quam ullam, consectetur atque autem ut? Tempore quae veniam
+                        eos
+                        fuga beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nostrum quos
+                        enim
+                        libero explicabo eius mollitia nobis debitis nisi perferendis rem itaque doloremque alias illum
+                        quia
+                        consectetur, aperiam ipsum odio?</p>
+                    <article class="social">
+                        <button><a href="#">GitHub</a></button>
+                        <button><a href="#">Instagran</a></button>
+                    </article>
+                </article>
+            </article>
+        </section>
+        <section class="main">
+            <article class="content">
+                <img src="img/perfil-masculino.jpg" alt="Imagem de Exemplo" class="imagem">
+                <article class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum
+                        magna
+                        sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus
+                        mus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores id placeat tempora
+                        incidunt
+                        eius odit, voluptatum molestiae iste quam ullam, consectetur atque autem ut? Tempore quae veniam
+                        eos
+                        fuga beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nostrum quos
+                        enim
+                        libero explicabo eius mollitia nobis debitis nisi perferendis rem itaque doloremque alias illum
+                        quia
+                        consectetur, aperiam ipsum odio?</p>
+                    <article class="social">
+                        <button><a href="#">GitHub</a></button>
+                        <button><a href="#">Instagran</a></button>
+                    </article>
+                </article>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
